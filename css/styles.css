@@ -132,3 +132,19 @@ main {
   font-size: clamp(7px, 3.5vw, 0.9rem);
   transform: translate(-5px, 5px);
 }
+
+.loading {
+  position: absolute;
+  left: 35%;
+  bottom: 53%;
+  height: 15%;
+  animation: loading 1s infinite linear;
+  display: none;
+
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(-360deg);
+  }
+}

@@ -1,6 +1,7 @@
 const $pokemonId = document.querySelector(".pokemon__number");
 const $pokemonName = document.querySelector(".pokemon__name");
 const $pokemonImage = document.querySelector(".pokemon__image");
+const $loadingImage = document.querySelector(".loading")
 
 const $form = document.querySelector(".form");
 const $input = document.querySelector(".input__search");
@@ -25,11 +26,15 @@ const fetchPokemon = async (pokemon) => {
 const renderPokemon = async (pokemon) => {
   $pokemonName.innerHTML = "Carregando...";
   $pokemonId.innerHTML = "";
+  $pokemonImage.style.display = 'none'
+  $loadingImage.style.display = 'block'
+  $loadingImage.style.animation = 'loading 1s infinite linear'
 
   const data = await fetchPokemon(pokemon);
 
   if (data) {
-    $pokemonImage.style.display = "block";
+    $pokemonImage.style.display = 'block'
+    $loadingImage.style.display = 'none'
     if ($shinyBtn.classList.contains('active')){
     $pokemonImage.src =
       data["sprites"]["versions"]["generation-v"]["black-white"]["animated"][
@@ -47,7 +52,9 @@ const renderPokemon = async (pokemon) => {
   } else {
     $pokemonId.innerHTML = "";
     $pokemonName.innerHTML = "Não Encontrado";
-    $pokemonImage.style.display = "none";
+    $pokemonImage.style.display = 'none'
+    $loadingImage.style.display = 'block'
+    $loadingImage.style.animation = 'none'
   }
 };
 
