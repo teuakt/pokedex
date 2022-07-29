@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Oxanium", cursive;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #6ab7f5, #ffffff);
+  min-height: 100vh;
+  text-align: center;
+  padding: 5%;
+}
+
+main {
+  display: inline-block;
+  position: relative;
+}
+
+.pokedex {
+  width: 100%;
+  max-width: 425px;
+}
+
+.pokemon__image {
+  position: absolute;
+  left: 50%;
+  bottom: 55%;
+  transform: translate(-60%, 30%);
+  height: 15%;
+}
+
+.btn-shiny {
+  position: absolute;
+  bottom: 41%;
+  left: 22%;
+  aspect-ratio: 1/1;
+  width: 8%;
+  border-radius: 5px;
+  border: 2px solid #222;
+  font-size: clamp(4px, 2vw, 0.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: #d30a40;
+  box-shadow: -3px 3px 0 #8a092a, -5px 5px 0 #111;
+  padding: 0px;
+}
+.active {
+  box-shadow: inset -3px 3px 0 #8a092a;
+  transform: translate(-5px, 5px);
+  font-size: clamp(4px, 2vw, 0.44rem);
+}
+
+.pokemon__data {
+  position: absolute;
+  bottom: 40%;
+  left: 35.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6%;
+  font-size: clamp(8px, 4vw, 20px);
+  line-height: 1rem;
+  color: #aaaaaa;
+  max-width: 40%;
+  width: 100%;
+  /* background-color: #111; */
+
+}
+
+.pokemon__name {
+  color: #3a444d;
+  text-transform: capitalize;
+}
+
+.form {
+  position: absolute;
+  width: 65%;
+  bottom: 27%;
+  left: 13.5%;
+}
+
+.input__search {
+  width: 100%;
+  padding: 4%;
+  outline: none;
+  border: 2px solid #333333;
+  border-radius: 5px 5px 5px 3px;
+  font-weight: 600;
+  color: #3a444d;
+  font-size: clamp(8px, 5vw, 1rem);
+  text-align: left;
+  box-shadow: -3px 3px 0 #888, -5px 5px 0 #222;
+}
+
+.input__search {
+  text-align: left;
+}
+
+.input__search::placeholder {
+  text-align: right;
+  color: #aaa;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 65%;
+  transform: translate(-57%, 0);
+}
+
+.button {
+  width: 47%;
+  padding: 4%;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+  font-size: clamp(8px, 4vw, 1rem);
+  background-color: #444444;
+  box-shadow: -3px 3px 0 #222, -5px 5px 0 #000;
+  text-transform: uppercase;
+}
+
+.button:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: clamp(7px, 3.5vw, 0.9rem);
+  transform: translate(-5px, 5px);
+}
